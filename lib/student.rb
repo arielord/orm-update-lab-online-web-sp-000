@@ -49,7 +49,7 @@ class Student
       WHERE name = ?
     SQL
     
-    DB[:conn].execute(sql, name).find {|row| row[1] == name}
+    DB[:conn].execute(sql, name)
   end
   
   def save
